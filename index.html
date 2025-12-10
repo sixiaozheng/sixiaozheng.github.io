@@ -1,1 +1,683 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sixiao Zheng | Academic Homepage</title>
+    <meta name="description" content="Academic homepage of Sixiao Zheng.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        accent: '#2563eb', // Royal Blue
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-feature-settings: "cv03", "cv04", "cv11"; }
+        .paper-row:last-child { border-bottom: none; }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased min-h-screen py-12">
+
+    <!-- Main Container: Clean, single column -->
+    <div class="max-w-4xl mx-auto px-6 sm:px-8">
+        
+        <!-- 1. BIOGRAPHY Section -->
+        <section class="mb-16">
+            <div class="flex flex-col md:flex-row gap-10 items-start">
+                
+                <!-- Text Content -->
+                <div class="flex-1 order-2 md:order-1">
+                    <h1 class="text-4xl font-bold tracking-tight text-black mb-3">Sixiao Zheng <span class="text-2xl text-gray-500 font-normal ml-2">(郑思晓)</span></h1>
+                    
+                    <p class="text-lg text-gray-800 font-medium mb-1">
+                        Generative AI Researcher
+                    </p>
+                    <p class="text-base text-accent mb-5">
+                        <a href="https://www.fudan.edu.cn/en/" class="hover:underline">Fudan University</a> <span class="text-black">&</span> <a href="https://www.sii.edu.cn/" class="hover:underline">Shanghai Innovation Institute</a>
+                    </p>
+                    
+                    <p class="text-gray-600 mb-6 leading-relaxed max-w-2xl">
+                        I am currently a third-year Ph.D. student in the joint training program between <span class="text-slate-900 font-medium">Fudan University</span> and <span class="text-slate-900 font-medium">Shanghai Innovation Institute</span>, advised by Prof. <a href="https://yanweifu.github.io/" class="text-slate-900 font-medium hover-underline border-b border-slate-200 hover:border-slate-900 transition-colors">Yanwei Fu</a>.
+                        Previously, I received my Master's degree from Fudan University in 2021, co-advised by Prof. <a href="https://www.dcs.warwick.ac.uk/~feng/" class="text-slate-900 font-medium hover-underline border-b border-slate-200 hover:border-slate-900 transition-colors">Jianfeng Feng</a> and Prof. <a href="https://yanweifu.github.io/" class="text-slate-900 font-medium hover-underline border-b border-slate-200 hover:border-slate-900 transition-colors">Yanwei Fu</a>. I obtained my Bachelor's degree from South China Normal University in 2018, under the supervision of Prof. <a href="https://scholar.google.com/citations?user=V749EZ0AAAAJ" class="text-slate-900 font-medium hover-underline border-b border-slate-200 hover:border-slate-900 transition-colors">Jiajia Chen</a>.
+                        From 2021 to 2023, I worked as a Researcher at <a href="https://hunyuan.tencent.com/visual" class="text-slate-900 font-medium hover-underline border-b border-slate-200 hover:border-slate-900 transition-colors">Tencent Hunyuan</a>. Currently, I am a Research Intern at <a href="https://arc.tencent.com/en/index" class="text-slate-900 font-medium hover-underline border-b border-slate-200 hover:border-slate-900 transition-colors">Tencent ARC Lab</a>, working with Dr. <a href="https://wbhu.github.io/" class="text-slate-900 font-medium hover-underline border-b border-slate-200 hover:border-slate-900 transition-colors">Wenbo Hu</a>.
+                        My research interests include <span class="font-medium text-slate-900">Image/Video Generation</span>, <span class="font-medium text-slate-900">Object Detection</span>, and <span class="font-medium text-slate-900">Image Segmentation</span>. Currently, I am focusing on <span class="font-medium text-slate-900">Generative World Models</span>.
+                    </p>
+    
+                    <!-- Social Links -->
+                    <div class="flex flex-wrap gap-4 text-sm">
+                        <a href="mailto:sxzheng18@fudan.edu.cn" class="flex items-center gap-1.5 hover:text-accent transition-colors">
+                            <i data-lucide="mail" class="w-4 h-4"></i> Email
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=PIvAYo0AAAAJ&hl=en" target="_blank" class="flex items-center gap-1.5 hover:text-accent transition-colors">
+                            <i data-lucide="graduation-cap" class="w-4 h-4"></i> Google Scholar
+                        </a>
+                        <a href="https://github.com/sixiaozheng" target="_blank" class="flex items-center gap-1.5 hover:text-accent transition-colors">
+                            <i data-lucide="github" class="w-4 h-4"></i> GitHub
+                        </a>
+                        <a href="https://x.com/SXZheng215132" class="flex items-center gap-1.5 hover:text-accent transition-colors">
+                            <img src="logo/X.svg" alt="X logo" class="w-4 h-4"> X
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Avatar -->
+                <div class="order-1 md:order-2 flex-shrink-0">
+                    <div class="w-40 h-40 rounded-full bg-gray-100 flex items-center justify-center text-4xl font-bold text-gray-300 overflow-hidden shadow-sm">
+                        <!-- Replace with <img src="..." /> -->
+                        SZ
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. NEWS Section -->
+        <section class="mb-16">
+            <h2 class="text-xl font-bold text-black mb-6 border-b border-gray-200 pb-2">News</h2>
+            <div class="space-y-3">
+                <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">Feb 2025</span>
+                   <p class="text-gray-600">Released new paper <span class="font-semibold text-gray-800">"VidCRAFT3"</span> on arXiv.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">Dec 2024</span>
+                   <p class="text-gray-600">One paper accepted to <strong>AAAI 2025</strong>.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">Sep 2024</span>
+                   <p class="text-gray-600">Started Joint-Training at <strong>Shanghai Innovation Institute</strong>.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">Jun 2024</span>
+                   <p class="text-gray-600">Joined <strong>Huawei Noah's Ark Lab</strong> as Research Intern.</p>
+               </div>
+           </div>
+        </section>
+
+        <!-- 3. EDUCATION Section -->
+        <section class="mb-16">
+            <h2 class="text-xl font-bold text-black mb-8 border-b border-gray-200 pb-2">Education</h2>
+
+            <div class="space-y-8">
+                <!-- Fudan PhD -->
+                <div class="flex gap-4 sm:gap-6 items-start">
+                    <!-- School Logo -->
+                    <div class="w-12 h-12 flex-shrink-0">
+                        <img src="logo/fudan.png" alt="Fudan Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                            <h3 class="font-bold text-gray-900">Fudan University</h3>
+                            <span class="text-sm text-gray-500 font-mono">2023 - 2027 (Expected)</span>
+                        </div>
+                        <div class="text-gray-700">Ph.D. in Statistics</div>
+                    </div>
+                </div>
+
+                <!-- Shanghai Innovation -->
+                <div class="flex gap-4 sm:gap-6 items-start">
+                    <!-- School Logo -->
+                    <div class="w-12 h-12 flex-shrink-0">
+                        <img src="logo/sii.jpg" alt="Shanghai Innovation Institute Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                            <h3 class="font-bold text-gray-900">Shanghai Innovation Institute</h3>
+                            <span class="text-sm text-gray-500 font-mono">2024 - 2027 (Expected)</span>
+                        </div>
+                        <div class="text-gray-700">Doctoral Joint-Training Program</div>
+                    </div>
+                </div>
+
+                <!-- Fudan Master -->
+                <div class="flex gap-4 sm:gap-6 items-start">
+                    <div class="w-12 h-12 flex-shrink-0">
+                        <img src="logo/fudan.png" alt="Fudan Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                            <h3 class="font-bold text-gray-900">Fudan University</h3>
+                            <span class="text-sm text-gray-500 font-mono">2018 - 2021</span>
+                        </div>
+                        <div class="text-gray-700">M.S. in Computer Application</div>
+                    </div>
+                </div>
+
+                <!-- SCNU Bachelor -->
+                <div class="flex gap-4 sm:gap-6 items-start">
+                    <div class="w-12 h-12 flex-shrink-0">
+                        <img src="logo/scnu.png" alt="SCNU Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                            <h3 class="font-bold text-gray-900">South China Normal University</h3>
+                            <span class="text-sm text-gray-500 font-mono">2014 - 2018</span>
+                        </div>
+                        <div class="text-gray-700">B.E. in Communication Engineering</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SELECTED PUBLICATIONS Section -->
+        <section class="mb-16">
+            <h2 class="text-xl font-bold text-black mb-8 border-b border-gray-200 pb-2">Selected Publications</h2>
+            
+            <div class="space-y-8">
+                
+
+
+                <!-- Paper 2 (New) -->
+                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
+                    <div class="w-full sm:w-64 flex-shrink-0">
+                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
+                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold leading-tight text-black mb-2">
+                            A Neural Representation Framework with LLM-Driven Spatial Reasoning for Open-Vocabulary 3D Visual Grounding
+                        </h3>
+                        <div class="text-sm text-gray-600 mb-1 leading-relaxed">
+                            Zhenyang Liu, <span class="font-bold text-black">Sixiao Zheng</span>, Siyu Chen, Cairong Zhao, Longfei Liang, Xiangyang Xue, Yanwei Fu
+                        </div>
+                        <div class="text-sm text-black font-semibold mb-2">ACM MM 2025</div>
+                        <div class="flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://arxiv.org/pdf/2507.06719" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> Paper
+                            </a>
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="globe" class="w-4 h-4"></i> Project
+                            </a> -->
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 2 (New) -->
+                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
+                    <div class="w-full sm:w-64 flex-shrink-0">
+                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
+                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold leading-tight text-black mb-2">
+                            TriVLA: A Triple-System-Based Unified Vision-Language-Action Model with Episodic World Modeling for General Robot Control
+                        </h3>
+                        <div class="text-sm text-gray-600 mb-1 leading-relaxed">
+                            Zhenyang Liu, Yongchong Gu, <span class="font-bold text-black">Sixiao Zheng</span>, Yanwei Fu, Xiangyang Xue, Yu-Gang Jiang
+                        </div>
+                        <div class="text-sm text-gray-500 italic mb-2">arXiv preprint, 2025</div>
+                        <div class="flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://arxiv.org/pdf/2507.01424" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> Paper
+                            </a>
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="globe" class="w-4 h-4"></i> Project
+                            </a> -->
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 3 (Previously Paper 1) -->
+                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
+                    <div class="w-full sm:w-64 flex-shrink-0">
+                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
+                             <!-- Replace this with your paper teaser image -->
+                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold leading-tight text-black mb-2">
+                            VidCRAFT3: Camera, Object, and Lighting Control for Image-to-Video Generation
+                        </h3>
+                        <div class="text-sm text-gray-600 mb-1 leading-relaxed">
+                            <span class="font-bold text-black">Sixiao Zheng</span>, Zimian Peng, Yanpeng Zhou, Yi Zhu, Hang Xu, Xiangru Huang, Yanwei Fu
+                        </div>
+                        <div class="text-sm text-gray-500 italic mb-2">arXiv preprint, 2025</div>
+                        <div class="flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://arxiv.org/pdf/2502.07531" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> Paper
+                            </a>
+                            <a href="https://sixiaozheng.github.io/VidCRAFT3/" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="globe" class="w-4 h-4"></i> Project
+                            </a>
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 3 -->
+                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
+                    <div class="w-full sm:w-64 flex-shrink-0">
+                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
+                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold leading-tight text-black mb-2">
+                            ReasonGrounder: LVLM-Guided Hierarchical Feature Splatting for Open-Vocabulary 3D Visual Grounding and Reasoning
+                        </h3>
+                        <div class="text-sm text-gray-600 mb-1 leading-relaxed">
+                            Zhenyang Liu, Yikai Wang, <span class="font-bold text-black">Sixiao Zheng</span>, Tongying Pan, Longfei Liang, Yanwei Fu, Xiangyang Xue
+                        </div>
+                        <div class="text-sm text-black font-semibold mb-2">CVPR 2025</div>
+                        <div class="flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://arxiv.org/pdf/2503.23297" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> Paper
+                            </a>
+                            <a href="https://zhenyangliu.github.io/ReasonGrounder/" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="globe" class="w-4 h-4"></i> Project
+                            </a>
+                            <a href="https://github.com/ZhenyangLiu/ReasonGrounder" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Paper 2 -->
+                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
+                    <div class="w-full sm:w-64 flex-shrink-0">
+                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
+                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold leading-tight text-black mb-2">
+                            ContextualStory: Consistent Visual Storytelling with Spatially-Enhanced and Storyline Context
+                        </h3>
+                        <div class="text-sm text-gray-600 mb-1 leading-relaxed">
+                            <span class="font-bold text-black">Sixiao Zheng</span>, Yanwei Fu
+                        </div>
+                        <div class="text-sm text-black font-semibold mb-2">AAAI 2025</div>
+                        <div class="flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://arxiv.org/pdf/2407.09774" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> Paper
+                            </a>
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="globe" class="w-4 h-4"></i> Project
+                            </a> -->
+                            <a href="https://github.com/sixiaozheng/ContextualStory" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Paper 4 -->
+                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
+                    <div class="w-full sm:w-64 flex-shrink-0">
+                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
+                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold leading-tight text-black mb-2">
+                            Intelligent Director: An Automatic Framework for Dynamic Visual Composition using ChatGPT
+                        </h3>
+                        <div class="text-sm text-gray-600 mb-1 leading-relaxed">
+                            <span class="font-bold text-black">Sixiao Zheng</span>, Jingyang Huo, Yu Wang, Yanwei Fu
+                        </div>
+                        <div class="text-sm text-gray-500 italic mb-2">arXiv preprint, 2024</div>
+                        <div class="flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://arxiv.org/pdf/2402.15746" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> Paper
+                            </a>
+                            <a href="https://sixiaozheng.github.io/IntelligentDirector/" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="globe" class="w-4 h-4"></i> Project
+                            </a>
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 6 -->
+                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
+                    <div class="w-full sm:w-64 flex-shrink-0">
+                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
+                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold leading-tight text-black mb-2">
+                            Vision Transformers: From Semantic Segmentation to Dense Prediction
+                        </h3>
+                        <div class="text-sm text-gray-600 mb-1 leading-relaxed">
+                            Li Zhang*, Jiachen Lu*, <span class="font-bold text-black">Sixiao Zheng*</span>, Xinxuan Zhao, Xiatian Zhu, Yanwei Fu, Tao Xiang, Jianfeng Feng, Philip H.S. Torr
+                        </div>
+                        <div class="text-sm text-black font-semibold mb-2">IJCV 2024</div>
+                        <div class="flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://arxiv.org/pdf/2207.09339" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> Paper
+                            </a>
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="globe" class="w-4 h-4"></i> Project
+                            </a> -->
+                            <a href="https://github.com/fudan-zvg/SETR" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 1 (New) -->
+                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
+                    <div class="w-full sm:w-64 flex-shrink-0">
+                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
+                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold leading-tight text-black mb-2">
+                            HunYuan_tvr for Text-Video Retrieval
+                        </h3>
+                        <div class="text-sm text-gray-600 mb-1 leading-relaxed">
+                            Shaobo Min, Weijie Kong, Rong-Cheng Tu, Dihong Gong, Chengfei Cai, Wenzhe Zhao, Chenyang Liu, <span class="font-bold text-black">Sixiao Zheng</span>, Hongfa Wang, Zhifeng Li, Wei Liu
+                        </div>
+                        <div class="text-sm text-gray-500 italic mb-2">arXiv preprint, 2022</div>
+                        <div class="flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://arxiv.org/pdf/2204.03382v6" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> Paper
+                            </a>
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="globe" class="w-4 h-4"></i> Project
+                            </a> -->
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 7 -->
+                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
+                    <div class="w-full sm:w-64 flex-shrink-0">
+                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
+                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold leading-tight text-black mb-2">
+                            Clustering by the Probability Distributions from Extreme Value Theory
+                        </h3>
+                        <div class="text-sm text-gray-600 mb-1 leading-relaxed">
+                            <span class="font-bold text-black">Sixiao Zheng</span>, Ke Fan, Yanxi Hou, Jianfeng Feng, Yanwei Fu
+                        </div>
+                        <div class="text-sm text-black font-semibold mb-2">IEEE Transactions on Artificial Intelligence 2023</div>
+                        <div class="flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://arxiv.org/pdf/2202.09784" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> Paper
+                            </a>
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="globe" class="w-4 h-4"></i> Project
+                            </a> -->
+                            <a href="https://github.com/sixiaozheng/EVT-K-means" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Paper 5 (SETR) -->
+                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8 bg-blue-50/50 p-4 -mx-4 rounded">
+                    <div class="w-full sm:w-64 flex-shrink-0">
+                        <div class="aspect-[16/9] bg-white rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
+                            <i data-lucide="star" class="w-8 h-8 text-amber-400 fill-current"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold leading-tight text-black mb-2">
+                            Rethinking Semantic Segmentation from a Sequence-to-Sequence Perspective with Transformers
+                        </h3>
+                        <div class="text-sm text-gray-600 mb-1 leading-relaxed">
+                            <span class="font-bold text-black">Sixiao Zheng</span>, Jiachen Lu, Hengshuang Zhao, Xiatian Zhu, Zekun Luo, Yabiao Wang, Yanwei Fu, Jianfeng Feng, Tao Xiang, Philip H.S. Torr, Li Zhang
+                        </div>
+                        <div class="flex items-center gap-3 mb-2 text-sm">
+                            <span class="font-bold text-black">CVPR 2021</span>
+                            <span class="text-red-600 font-semibold flex items-center gap-1">
+                                <i data-lucide="flame" class="w-3 h-3"></i> 4600+ Citations
+                            </span>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-2">
+                            <a href="https://www.sast.gov.cn/content.html?id=1669256530693840898" class="hover:underline text-accent">WAIC Youth Outstanding Paper Award (Top 10)</a>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-2">
+                            <a href="https://www.paperdigest.org/2022/02/most-influential-cvpr-papers-2022-02/" class="hover:underline text-accent">Most Influential CVPR'21 Papers #2</a>
+                        </div>
+                        <div class="flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://arxiv.org/pdf/2012.15840" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> Paper
+                            </a>
+                            <a href="https://fudan-zvg.github.io/SETR/" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="globe" class="w-4 h-4"></i> Project
+                            </a>
+                            <a href="https://github.com/fudan-zvg/SETR" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code (1.1k stars)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Paper 9 -->
+                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
+                    <div class="w-full sm:w-64 flex-shrink-0">
+                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
+                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold leading-tight text-black mb-2">
+                            NMS-Loss: Learning with Non-Maximum Suppression for Crowded Pedestrian Detection
+                        </h3>
+                        <div class="text-sm text-gray-600 mb-1 leading-relaxed">
+                            Zekun Luo, Zheng Fang, <span class="font-bold text-black">Sixiao Zheng</span>, Yabiao Wang, and Yanwei Fu
+                        </div>
+                        <div class="text-sm text-black font-semibold mb-2">ICMR 2021</div>
+                        <div class="flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://arxiv.org/pdf/2106.02426" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> Paper
+                            </a>
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="globe" class="w-4 h-4"></i> Project
+                            </a> -->
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper 8 -->
+                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
+                    <div class="w-full sm:w-64 flex-shrink-0">
+                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
+                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold leading-tight text-black mb-2">
+                            Incrementally Zero-Shot Detection by an Extreme Value Analyzer
+                        </h3>
+                        <div class="text-sm text-gray-600 mb-1 leading-relaxed">
+                            <span class="font-bold text-black">Sixiao Zheng</span>, Yanwei Fu, and Yanxi Hou
+                        </div>
+                        <div class="text-sm text-black font-semibold mb-2">ICPR 2021 <span class="text-xs text-gray-600">(Oral)</span></div>
+                        <div class="flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://arxiv.org/pdf/2103.12609" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> Paper
+                            </a>
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="globe" class="w-4 h-4"></i> Project
+                            </a> -->
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. EXPERIENCE Section -->
+        <section class="mb-16">
+            <h2 class="text-xl font-bold text-black mb-8 border-b border-gray-200 pb-2">Experience</h2>
+            
+            <div class="space-y-8">
+                
+                <!-- Tencent ARC Lab -->
+                <div class="flex gap-4 sm:gap-6 items-start">
+                    <div class="w-12 h-12 flex-shrink-0">
+                        <img src="logo/arc.png" alt="Tencent ARC Lab Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                            <h3 class="font-bold text-gray-900">Tencent ARC Lab</h3>
+                            <span class="text-sm text-gray-500 font-mono">2025.05 – Present</span>
+                        </div>
+                        <div class="text-gray-700">Research Intern</div>
+                    </div>
+                </div>
+
+                <!-- Huawei Noah's Ark Lab -->
+                <div class="flex gap-4 sm:gap-6 items-start">
+                    <div class="w-12 h-12 flex-shrink-0">
+                        <img src="logo/noah_ark.png" alt="Huawei Noah's Ark Lab Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                            <h3 class="font-bold text-gray-900">Huawei Noah's Ark Lab</h3>
+                            <span class="text-sm text-gray-500 font-mono">2024.06 – 2025.04</span>
+                        </div>
+                        <div class="text-gray-700">Research Intern</div>
+                    </div>
+                </div>
+
+                <!-- Tencent Hunyuan -->
+                <div class="flex gap-4 sm:gap-6 items-start">
+                    <div class="w-12 h-12 flex-shrink-0">
+                        <img src="logo/hunyuan.png" alt="Tencent Hunyuan Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                            <h3 class="font-bold text-gray-900">Tencent Hunyuan</h3>
+                            <span class="text-sm text-gray-500 font-mono">2021.07 – 2023.08</span>
+                        </div>
+                        <div class="text-gray-700">Researcher</div>
+                    </div>
+                </div>
+
+                <!-- Tencent YouTu Lab -->
+                <div class="flex gap-4 sm:gap-6 items-start">
+                    <div class="w-12 h-12 flex-shrink-0">
+                        <img src="logo/youtu.png" alt="Tencent YouTu Lab Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                            <h3 class="font-bold text-gray-900">Tencent YouTu Lab</h3>
+                            <span class="text-sm text-gray-500 font-mono">2020.06 – 2021.01</span>
+                        </div>
+                        <div class="text-gray-700">Research Intern</div>
+                    </div>
+                </div>
+
+                <!-- Duoyi Network -->
+                <div class="flex gap-4 sm:gap-6 items-start">
+                    <div class="w-12 h-12 flex-shrink-0">
+                        <img src="logo/duoyi.png" alt="Duoyi Network Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline">
+                            <h3 class="font-bold text-gray-900">Duoyi Network</h3>
+                            <span class="text-sm text-gray-500 font-mono">2018.06 – 2018.08</span>
+                        </div>
+                        <div class="text-gray-700">Research Intern</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. HONORS Section -->
+        <section class="mb-10">
+            <h2 class="text-xl font-bold text-black mb-8 border-b border-gray-200 pb-2">Honors & Awards</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-sm text-gray-700">
+                <div class="flex gap-4">
+                    <span class="font-bold text-gray-900 shrink-0 w-12 text-right">2024</span>
+                    <span>Fudan University Outstanding Student</span>
+                </div>
+                <div class="flex gap-4">
+                    <span class="font-bold text-gray-900 shrink-0 w-12 text-right">2023</span>
+                    <span>
+                        <a href="https://www.sast.gov.cn/content.html?id=1669256530693840898" class="hover:underline text-accent">WAIC Youth Outstanding Paper Award (Top 10)</a>
+                    </span>
+                </div>
+                <div class="flex gap-4">
+                    <span class="font-bold text-gray-900 shrink-0 w-12 text-right">2022</span>
+                    <span>Tencent Business Breakthrough Award</span>
+                </div>
+                <div class="flex gap-4">
+                    <span class="font-bold text-gray-900 shrink-0 w-12 text-right">2022</span>
+                    <span>Tencent TEG SEVP Award for Technical Breakthrough</span>
+                </div>
+                <div class="flex gap-4">
+                    <span class="font-bold text-gray-900 shrink-0 w-12 text-right">2021</span>
+                    <span>WAIC BPAA Public Algorithm Track · Gold Award</span>
+                </div>
+                <div class="flex gap-4">
+                    <span class="font-bold text-gray-900 shrink-0 w-12 text-right">16-17</span>
+                    <span>Mathematical Contest in Modeling (MCM) 2nd Prize</span>
+                </div>
+                <div class="flex gap-4">
+                    <span class="font-bold text-gray-900 shrink-0 w-12 text-right">15-17</span>
+                    <span>National Encouragement Scholarship (x3)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="mt-20 py-8 border-t border-gray-200 text-center text-sm text-gray-500">
+            <p>&copy; 2025 Sixiao Zheng. Last updated: February 2025.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
