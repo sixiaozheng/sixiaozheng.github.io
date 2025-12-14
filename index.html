@@ -32,12 +32,34 @@
     <style>
         body { font-feature-settings: "cv03", "cv04", "cv11"; }
         .paper-row:last-child { border-bottom: none; }
+        /* Avatar inner shadow moved to a class for reuse and cleanliness */
+        .avatar-inner-shadow { box-shadow: inset 0 -18px 36px rgba(0,0,0,0.08); }
+        
+        /* Paper image badge styling */
+        .paper-image-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .paper-badge {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #2563eb;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            font-size: 0.65rem;
+            font-weight: 600;
+            border-radius: 0;
+            z-index: 10;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-900 antialiased min-h-screen py-12">
 
     <!-- Main Container: Clean, single column -->
-    <div class="max-w-4xl mx-auto px-6 sm:px-8">
+    <div class="max-w-5xl mx-auto px-6 sm:px-8">
         
         <!-- 1. BIOGRAPHY Section -->
         <section class="mb-16">
@@ -80,12 +102,22 @@
     
                 <!-- Avatar -->
                 <div class="order-1 md:order-2 flex-shrink-0">
-                    <div class="w-40 h-40 rounded-full bg-gray-100 flex items-center justify-center text-4xl font-bold text-gray-300 overflow-hidden shadow-sm">
-                        <!-- Replace with <img src="..." /> -->
-                        SZ
+                    <div class="relative w-72 h-56 md:w-80 md:h-72 rounded-2xl bg-gray-100 overflow-hidden shadow-2xl drop-shadow-lg ring-1 ring-accent/20 transform-gpu transition-all duration-300 hover:scale-105">
+                        <!-- Replace with actual photo file 'sxzheng.jpg' placed next to index.html -->
+                        <img src="sxzheng.jpg" alt="Sixiao Zheng" class="w-full h-full object-cover" loading="lazy" decoding="async">
+
+                        <!-- Subtle gradient overlay for visual depth -->
+                        <div class="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-transparent to-accent/10"></div>
+
+                        <!-- Inner (inset) shadow for depth -->
+                        <div class="absolute inset-0 pointer-events-none avatar-inner-shadow"></div>
+
+                        <!-- Decorative blurred accent shape (purely visual) -->
+                        <div class="absolute -bottom-6 -right-8 w-32 h-32 bg-gradient-to-br from-accent/40 to-transparent opacity-30 blur-2xl transform rotate-45 pointer-events-none"></div>
                     </div>
                 </div>
             </div>
+
         </section>
 
         <!-- 2. NEWS Section -->
@@ -93,22 +125,86 @@
             <h2 class="text-xl font-bold text-black mb-6 border-b border-gray-200 pb-2">News</h2>
             <div class="space-y-3">
                 <div class="flex gap-6 items-baseline text-sm">
-                   <span class="font-bold text-gray-900 shrink-0 w-20">Feb 2025</span>
+                    <span class="font-bold text-gray-900 shrink-0 w-20">2025.07</span>
+                    <p class="text-gray-600">Released new paper <span class="font-semibold text-gray-800">"TriVLA"</span> on arXiv.</p>
+                </div>
+                <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2025.07</span>
+                   <p class="text-gray-600">One paper accepted to <strong>ACM MM 2025</strong>.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2025.05</span>
+                   <p class="text-gray-600">Joined <strong>Tencent ARC Lab</strong> as Research Intern.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2025.02</span>
+                   <p class="text-gray-600">One paper accepted to <strong>CVPR 2025</strong>.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2025.02</span>
                    <p class="text-gray-600">Released new paper <span class="font-semibold text-gray-800">"VidCRAFT3"</span> on arXiv.</p>
                </div>
                <div class="flex gap-6 items-baseline text-sm">
-                   <span class="font-bold text-gray-900 shrink-0 w-20">Dec 2024</span>
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2024.12</span>
                    <p class="text-gray-600">One paper accepted to <strong>AAAI 2025</strong>.</p>
                </div>
                <div class="flex gap-6 items-baseline text-sm">
-                   <span class="font-bold text-gray-900 shrink-0 w-20">Sep 2024</span>
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2024.09</span>
                    <p class="text-gray-600">Started Joint-Training at <strong>Shanghai Innovation Institute</strong>.</p>
                </div>
                <div class="flex gap-6 items-baseline text-sm">
-                   <span class="font-bold text-gray-900 shrink-0 w-20">Jun 2024</span>
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2024.07</span>
+                   <p class="text-gray-600">One paper accepted to <strong>IJCV 2024</strong>.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2024.06</span>
                    <p class="text-gray-600">Joined <strong>Huawei Noah's Ark Lab</strong> as Research Intern.</p>
                </div>
-           </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2024.02</span>
+                   <p class="text-gray-600">Released new paper <span class="font-semibold text-gray-800">"Intelligent Director"</span> on arXiv.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2023.06</span>
+                   <p class="text-gray-600">Received <strong><a href="https://www.sast.gov.cn/content.html?id=1669256530693840898" class="hover:underline text-accent">WAIC Youth Outstanding Paper Award (Top 10 Papers)</a></strong>.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2022.04</span>
+                   <p class="text-gray-600">Released new paper <span class="font-semibold text-gray-800">"HunYuan_tvr"</span> on arXiv.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2022.02</span>
+                   <p class="text-gray-600">One paper accepted to <strong>IEEE TAI 2022</strong>.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2021.07</span>
+                   <p class="text-gray-600">Joined <strong>Tencent Hunyuan</strong> as Researcher.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2021.07</span>
+                   <p class="text-gray-600">Received <strong><a href="https://mp.weixin.qq.com/s/nibPg5NNKib9BlfIHF6ONw" class="hover:underline text-accent">WAIC | First Applied Algorithm Practice Exemplar Public Algorithm Track · Gold Award</a></strong>.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2021.06</span>
+                   <p class="text-gray-600">Obtained Master's degree from <strong>Fudan University</strong>.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2021.04</span>
+                   <p class="text-gray-600">One paper accepted to <strong>ICMR 2021</strong>.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2021.03</span>
+                   <p class="text-gray-600">One paper accepted to <strong>CVPR 2021</strong>.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2020.10</span>
+                   <p class="text-gray-600">One paper accepted to <strong>ICPR 2020</strong>.</p>
+               </div>
+               <div class="flex gap-6 items-baseline text-sm">
+                   <span class="font-bold text-gray-900 shrink-0 w-20">2020.06</span>
+                   <p class="text-gray-600">Joined <strong>Tencent YouTu Lab</strong> as Research Intern.</p>
+               </div>
+            </div>
         </section>
 
         <!-- 3. EDUCATION Section -->
@@ -174,50 +270,24 @@
                     </div>
                 </div>
             </div>
+
         </section>
 
         <!-- 4. SELECTED PUBLICATIONS Section -->
         <section class="mb-16">
             <h2 class="text-xl font-bold text-black mb-8 border-b border-gray-200 pb-2">Selected Publications</h2>
             
+            <div class="mt-2 mb-6 text-sm text-gray-700">
+                For the full list, please visit my <a href="https://scholar.google.com/citations?user=PIvAYo0AAAAJ&hl=en" target="_blank" class="text-accent hover:underline">Google Scholar</a>.
+            </div>
+
             <div class="space-y-8">
-                
-
-
                 <!-- Paper 2 (New) -->
                 <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
-                    <div class="w-full sm:w-64 flex-shrink-0">
-                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
-                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
-                        </div>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-lg font-bold leading-tight text-black mb-2">
-                            A Neural Representation Framework with LLM-Driven Spatial Reasoning for Open-Vocabulary 3D Visual Grounding
-                        </h3>
-                        <div class="text-sm text-gray-600 mb-1 leading-relaxed">
-                            Zhenyang Liu, <span class="font-bold text-black">Sixiao Zheng</span>, Siyu Chen, Cairong Zhao, Longfei Liang, Xiangyang Xue, Yanwei Fu
-                        </div>
-                        <div class="text-sm text-black font-semibold mb-2">ACM MM 2025</div>
-                        <div class="flex flex-wrap gap-4 text-sm font-medium">
-                            <a href="https://arxiv.org/pdf/2507.06719" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
-                                <i data-lucide="file-text" class="w-4 h-4"></i> Paper
-                            </a>
-                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
-                                <i data-lucide="globe" class="w-4 h-4"></i> Project
-                            </a> -->
-                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
-                                <i data-lucide="github" class="w-4 h-4"></i> Code
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Paper 2 (New) -->
-                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
-                    <div class="w-full sm:w-64 flex-shrink-0">
-                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
-                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                    <div class="w-full sm:w-72 flex-shrink-0">
+                        <div class="rounded border border-gray-200 overflow-hidden shadow-md paper-image-container">
+                            <div class="paper-badge">arXiv 2025</div>
+                            <img src="paper_representative_image/TriVLA.png" alt="TriVLA Paper" class="w-full h-auto">
                         </div>
                     </div>
                     <div class="flex-1">
@@ -232,9 +302,9 @@
                             <a href="https://arxiv.org/pdf/2507.01424" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
                                 <i data-lucide="file-text" class="w-4 h-4"></i> Paper
                             </a>
-                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                            <a href="https://zhenyangliu.github.io/TriVLA/" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
                                 <i data-lucide="globe" class="w-4 h-4"></i> Project
-                            </a> -->
+                            </a>
                             <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
                                 <i data-lucide="github" class="w-4 h-4"></i> Code
                             </a> -->
@@ -242,12 +312,44 @@
                     </div>
                 </div>
 
-                <!-- Paper 3 (Previously Paper 1) -->
+                <!-- Paper 2 (New) -->
                 <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
-                    <div class="w-full sm:w-64 flex-shrink-0">
-                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
-                             <!-- Replace this with your paper teaser image -->
-                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                    <div class="w-full sm:w-72 flex-shrink-0">
+                        <div class="rounded border border-gray-200 overflow-hidden shadow-md paper-image-container">
+                            <div class="paper-badge">ACM MM 2025</div>
+                            <img src="paper_representative_image/SpatialReasoner.png" alt="SpatialReasoner Paper" class="w-full h-auto">
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-bold leading-tight text-black mb-2">
+                            A Neural Representation Framework with LLM-Driven Spatial Reasoning for Open-Vocabulary 3D Visual Grounding
+                        </h3>
+                        <div class="text-sm text-gray-600 mb-1 leading-relaxed">
+                            Zhenyang Liu, <span class="font-bold text-black">Sixiao Zheng</span>, Siyu Chen, Cairong Zhao, Longfei Liang, Xiangyang Xue, Yanwei Fu
+                        </div>
+                        <div class="text-sm text-black font-semibold mb-2">ACM MM 2025</div>
+                        <div class="flex flex-wrap gap-4 text-sm font-medium">
+                            <a href="https://arxiv.org/pdf/2507.06719" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="file-text" class="w-4 h-4"></i> Paper
+                            </a>
+                            <a href="https://zhenyangliu.github.io/SpatialReasoner/" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="globe" class="w-4 h-4"></i> Project
+                            </a>
+                            <!-- <a href="#" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Paper 3 (Previously Paper 1) -->
+                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8 bg-blue-50/50 p-4 -mx-4 rounded">
+                    <div class="w-full sm:w-72 flex-shrink-0">
+                        <div class="rounded border border-gray-200 overflow-hidden shadow-md paper-image-container">
+                            <div class="paper-badge">arXiv 2025</div>
+                            <video src="paper_representative_image/VidCRAFT3.mp4" alt="VidCRAFT3 Paper" class="w-full h-auto" autoplay loop muted playsinline></video>
                         </div>
                     </div>
                     <div class="flex-1">
@@ -274,9 +376,10 @@
 
                 <!-- Paper 3 -->
                 <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
-                    <div class="w-full sm:w-64 flex-shrink-0">
-                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
-                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                    <div class="w-full sm:w-72 flex-shrink-0">
+                        <div class="rounded border border-gray-200 overflow-hidden shadow-md paper-image-container">
+                            <div class="paper-badge">CVPR 2025</div>
+                            <img src="paper_representative_image/ReasonGrounder.png" alt="ReasonGrounder Paper" class="w-full h-auto">
                         </div>
                     </div>
                     <div class="flex-1">
@@ -303,10 +406,11 @@
 
 
                 <!-- Paper 2 -->
-                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
-                    <div class="w-full sm:w-64 flex-shrink-0">
-                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
-                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8 bg-blue-50/50 p-4 -mx-4 rounded">
+                    <div class="w-full sm:w-72 flex-shrink-0">
+                        <div class="rounded border border-gray-200 overflow-hidden shadow-md paper-image-container">
+                            <div class="paper-badge">AAAI 2025</div>
+                            <img src="paper_representative_image/contextualstory.png" alt="ContextualStory Paper" class="w-full h-auto">
                         </div>
                     </div>
                     <div class="flex-1">
@@ -334,9 +438,10 @@
 
                 <!-- Paper 4 -->
                 <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
-                    <div class="w-full sm:w-64 flex-shrink-0">
-                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
-                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                    <div class="w-full sm:w-72 flex-shrink-0">
+                        <div class="rounded border border-gray-200 overflow-hidden shadow-md paper-image-container">
+                            <div class="paper-badge">arXiv 2024</div>
+                            <img src="paper_representative_image/ID.png" alt="ID Paper" class="w-full h-auto">
                         </div>
                     </div>
                     <div class="flex-1">
@@ -362,10 +467,11 @@
                 </div>
 
                 <!-- Paper 6 -->
-                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
-                    <div class="w-full sm:w-64 flex-shrink-0">
-                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
-                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8 bg-blue-50/50 p-4 -mx-4 rounded">
+                    <div class="w-full sm:w-72 flex-shrink-0">
+                        <div class="rounded border border-gray-200 overflow-hidden shadow-md paper-image-container">
+                            <div class="paper-badge">IJCV 2024</div>
+                            <img src="paper_representative_image/HLG.png" alt="HLG Paper" class="w-full h-auto">
                         </div>
                     </div>
                     <div class="flex-1">
@@ -392,9 +498,10 @@
 
                 <!-- Paper 1 (New) -->
                 <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
-                    <div class="w-full sm:w-64 flex-shrink-0">
-                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
-                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                    <div class="w-full sm:w-72 flex-shrink-0">
+                        <div class="rounded border border-gray-200 overflow-hidden shadow-md paper-image-container">
+                            <div class="paper-badge">arXiv 2022</div>
+                            <img src="paper_representative_image/hunyuan_tvr.png" alt="HunYuan_tvr Paper" class="w-full h-auto">
                         </div>
                     </div>
                     <div class="flex-1">
@@ -421,9 +528,10 @@
 
                 <!-- Paper 7 -->
                 <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
-                    <div class="w-full sm:w-64 flex-shrink-0">
-                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
-                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                    <div class="w-full sm:w-72 flex-shrink-0">
+                        <div class="rounded border border-gray-200 overflow-hidden shadow-md paper-image-container">
+                            <div class="paper-badge">IEEE TAI 2022</div>
+                            <img src="paper_representative_image/EVT-kmeans.png" alt="EVT-kmeans Paper" class="w-full h-auto">
                         </div>
                     </div>
                     <div class="flex-1">
@@ -433,7 +541,7 @@
                         <div class="text-sm text-gray-600 mb-1 leading-relaxed">
                             <span class="font-bold text-black">Sixiao Zheng</span>, Ke Fan, Yanxi Hou, Jianfeng Feng, Yanwei Fu
                         </div>
-                        <div class="text-sm text-black font-semibold mb-2">IEEE Transactions on Artificial Intelligence 2023</div>
+                        <div class="text-sm text-black font-semibold mb-2">IEEE Transactions on Artificial Intelligence 2022</div>
                         <div class="flex flex-wrap gap-4 text-sm font-medium">
                             <a href="https://arxiv.org/pdf/2202.09784" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
                                 <i data-lucide="file-text" class="w-4 h-4"></i> Paper
@@ -452,9 +560,10 @@
 
                 <!-- Paper 5 (SETR) -->
                 <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8 bg-blue-50/50 p-4 -mx-4 rounded">
-                    <div class="w-full sm:w-64 flex-shrink-0">
-                        <div class="aspect-[16/9] bg-white rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
-                            <i data-lucide="star" class="w-8 h-8 text-amber-400 fill-current"></i>
+                    <div class="w-full sm:w-72 flex-shrink-0">
+                        <div class="rounded border border-gray-200 overflow-hidden shadow-md paper-image-container">
+                            <div class="paper-badge">CVPR 2021</div>
+                            <img src="paper_representative_image/SETR.png" alt="SETR Paper" class="w-full h-auto">
                         </div>
                     </div>
                     <div class="flex-1">
@@ -476,6 +585,9 @@
                         <div class="text-xs text-gray-500 mb-2">
                             <a href="https://www.paperdigest.org/2022/02/most-influential-cvpr-papers-2022-02/" class="hover:underline text-accent">Most Influential CVPR'21 Papers #2</a>
                         </div>
+                        <div class="text-xs text-gray-500 mb-2">
+                            <a href="https://mp.weixin.qq.com/s/nibPg5NNKib9BlfIHF6ONw" class="hover:underline text-accent">WAIC | First Applied Algorithm Practice Exemplar Public Algorithm Track · Gold Award</a>
+                        </div>
                         <div class="flex flex-wrap gap-4 text-sm font-medium">
                             <a href="https://arxiv.org/pdf/2012.15840" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
                                 <i data-lucide="file-text" class="w-4 h-4"></i> Paper
@@ -493,9 +605,10 @@
 
                 <!-- Paper 9 -->
                 <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
-                    <div class="w-full sm:w-64 flex-shrink-0">
-                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
-                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                    <div class="w-full sm:w-72 flex-shrink-0">
+                        <div class="rounded border border-gray-200 overflow-hidden shadow-md paper-image-container">
+                            <div class="paper-badge">ICMR 2021</div>
+                            <img src="paper_representative_image/NMS-Loss.png" alt="NMS-Loss Paper" class="w-full h-auto">
                         </div>
                     </div>
                     <div class="flex-1">
@@ -522,9 +635,10 @@
 
                 <!-- Paper 8 -->
                 <div class="paper-row flex flex-col sm:flex-row gap-6 border-b border-gray-100 pb-8">
-                    <div class="w-full sm:w-64 flex-shrink-0">
-                        <div class="aspect-[16/9] bg-gray-100 rounded border border-gray-200 flex items-center justify-center overflow-hidden relative">
-                            <i data-lucide="image" class="w-8 h-8 text-gray-300"></i>
+                    <div class="w-full sm:w-72 flex-shrink-0">
+                        <div class="rounded border border-gray-200 overflow-hidden shadow-md paper-image-container">
+                            <div class="paper-badge">ICPR 2020</div>
+                            <img src="paper_representative_image/IZSD.png" alt="IZSD Paper" class="w-full h-auto">
                         </div>
                     </div>
                     <div class="flex-1">
@@ -534,7 +648,7 @@
                         <div class="text-sm text-gray-600 mb-1 leading-relaxed">
                             <span class="font-bold text-black">Sixiao Zheng</span>, Yanwei Fu, and Yanxi Hou
                         </div>
-                        <div class="text-sm text-black font-semibold mb-2">ICPR 2021 <span class="text-xs text-gray-600">(Oral)</span></div>
+                        <div class="text-sm text-black font-semibold mb-2">ICPR 2020 <span class="text-xs text-gray-600">(Oral)</span></div>
                         <div class="flex flex-wrap gap-4 text-sm font-medium">
                             <a href="https://arxiv.org/pdf/2103.12609" class="flex items-center gap-1 hover:text-accent hover:underline decoration-accent underline-offset-4 transition-colors">
                                 <i data-lucide="file-text" class="w-4 h-4"></i> Paper
@@ -550,6 +664,8 @@
                 </div>
 
             </div>
+
+
         </section>
 
         <!-- 5. EXPERIENCE Section -->
@@ -642,7 +758,7 @@
                 <div class="flex gap-4">
                     <span class="font-bold text-gray-900 shrink-0 w-12 text-right">2023</span>
                     <span>
-                        <a href="https://www.sast.gov.cn/content.html?id=1669256530693840898" class="hover:underline text-accent">WAIC Youth Outstanding Paper Award (Top 10)</a>
+                        <a href="https://www.sast.gov.cn/content.html?id=1669256530693840898" class="hover:underline text-accent">WAIC Youth Outstanding Paper Award (Top 10 Papers)</a>
                     </span>
                 </div>
                 <div class="flex gap-4">
@@ -655,15 +771,29 @@
                 </div>
                 <div class="flex gap-4">
                     <span class="font-bold text-gray-900 shrink-0 w-12 text-right">2021</span>
-                    <span>WAIC BPAA Public Algorithm Track · Gold Award</span>
+                    <span>
+                        <a href="https://mp.weixin.qq.com/s/nibPg5NNKib9BlfIHF6ONw" class="hover:underline text-accent">WAIC | First Applied Algorithm Practice Exemplar Public Algorithm Track · Gold Award</a>
+                    </span>
                 </div>
                 <div class="flex gap-4">
-                    <span class="font-bold text-gray-900 shrink-0 w-12 text-right">16-17</span>
+                    <span class="font-bold text-gray-900 shrink-0 w-12 text-right">2018</span>
+                    <span>Outstanding Graduate, School of Physics and Telecommunication Engineering, SCNU</span>
+                </div>
+                <div class="flex gap-4">
+                    <span class="font-bold text-gray-900 shrink-0 w-12 text-right">2017</span>
                     <span>Mathematical Contest in Modeling (MCM) 2nd Prize</span>
                 </div>
                 <div class="flex gap-4">
-                    <span class="font-bold text-gray-900 shrink-0 w-12 text-right">15-17</span>
-                    <span>National Encouragement Scholarship (x3)</span>
+                    <span class="font-bold text-gray-900 shrink-0 w-12 text-right">2017</span>
+                    <span>5th Teddy Cup Data Mining Challenge 2nd Prize</span>
+                </div>
+                <div class="flex gap-4">
+                    <span class="font-bold text-gray-900 shrink-0 w-12 text-right">2017</span>
+                    <span>8th Blue Bridge Cup Guangdong Java 2nd Prize</span>
+                </div>
+                <div class="flex gap-4">
+                    <span class="font-bold text-gray-900 shrink-0 w-12 text-right">2016</span>
+                    <span>Mathematical Contest in Modeling (MCM) 2nd Prize</span>
                 </div>
             </div>
         </section>
@@ -671,6 +801,10 @@
         <!-- Footer -->
         <footer class="mt-20 py-8 border-t border-gray-200 text-center text-sm text-gray-500">
             <p>&copy; 2025 Sixiao Zheng. Last updated: February 2025.</p>
+            
+            <div class="mt-6 flex justify-center w-full overflow-hidden" style="max-width: 300px; margin-left: auto; margin-right: auto;">
+                <script type="text/javascript" id="clustrmaps" src="https://cdn.clustrmaps.com/map_v2.js?d=GOF86A5MbWGxLJOWGH4nQEoaUirQA9ZnixP-huuL0Kw&cl=ffffff&w=a"></script>
+            </div>
         </footer>
 
     </div>
